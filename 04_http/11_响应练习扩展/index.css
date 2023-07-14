@@ -1,0 +1,15 @@
+table, td {
+  padding: 10px 20px;
+  border-collapse: collapse;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+tr:nth-child(odd) {
+  background-color: #aef;
+}
+tr:nth-child(even) {
+  background-color: rgb(170, 255, 213);
+}
+td:hover {
+  background-color: #fff;
+}

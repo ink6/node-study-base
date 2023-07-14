@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table, td {
+      padding: 10px 20px;
+      border-collapse: collapse;
+      cursor: pointer;
+      border: 1px solid #ccc;
+    }
+    tr:nth-child(odd) {
+      background-color: #aef;
+    }
+    tr:nth-child(even) {
+      background-color: rgb(170, 255, 213);
+    }
+    td:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>善良</td>
+      <td>美丽</td>
+      <td>大方</td>
+    </tr>
+    <tr>
+      <td>善良</td>
+      <td>美丽</td>
+      <td>大方</td>
+    </tr>
+    <tr>
+      <td>善良</td>
+      <td>美丽</td>
+      <td>大方</td>
+    </tr>
+    <tr>
+      <td>善良</td>
+      <td>美丽</td>
+      <td>大方</td>
+    </tr>
+  </table>
+  <script>
+    const _tds =  document.querySelectorAll('td')
+    _tds.forEach(_td => {
+      _td.onclick = function () {
+        console.log(_td);
+        _td.style.background = 'lightGreen'
+      }
+    })
+  </script>
+
+</body>
+</html>
