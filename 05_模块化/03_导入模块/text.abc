@@ -1,0 +1,3 @@
+exports.textabc = function () {
+  console.log('我会被当做js文件处理哦')
+}
