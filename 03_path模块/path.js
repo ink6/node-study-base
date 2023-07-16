@@ -5,7 +5,7 @@ const path = require('path')
 fs.writeFileSync(__dirname + '/index.html', 'love');
 // console.log(__dirname + '/index.html'); // 这种拼接的写法不规范
 
-// path.resolve 拼接规范的绝对路径
+// path.resolve 拼接规范的绝对路径 
 console.log(path.resolve(__dirname, './index.html')); // /Users/chenhui/MyBook/Study/Node/03_path模块/index.html
 console.log(path.resolve(__dirname, 'index.html')); // /Users/chenhui/MyBook/Study/Node/03_path模块/index.html
 console.log(path.resolve(__dirname, '/index.html')); // /index.html
