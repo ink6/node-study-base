@@ -1,0 +1,20 @@
+{
+  "accounts": [
+    {
+      "id": "_b0SbwcfN",
+      "title": "老公给",
+      "time": "2023-07-04",
+      "type": "1",
+      "account": "25000",
+      "remarks": "老公给钱钱"
+    },
+    {
+      "id": "vFONRe1KG",
+      "title": "买菜",
+      "time": "2023-07-12",
+      "type": "-1",
+      "account": "90",
+      "remarks": "买菜菜 做饭饭"
+    }
+  ]
+}
