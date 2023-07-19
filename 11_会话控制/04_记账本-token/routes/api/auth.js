@@ -2,6 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken')
 const { UsersModel } = require('../../models/UserModel');
 const md5 = require('md5');
+const { secret } = require('../../config/config')
 const router = express.Router();
 
 //登录操作
@@ -16,7 +17,7 @@ router.post('/login', function(req, res, next) {
     const token = jwt.sign({
       username: data.username,
       _id: data._id
-    }, 'baogeloveme', {
+    }, secret, {
       expiresIn: 60 * 60 * 24 * 7
     })
     // req.session.username = data.username

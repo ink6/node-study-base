@@ -6,7 +6,7 @@ const router = express.Router();
 const checkTokenMiddleware = require('../../middlewares/checkTokenMiddleware')
 // 获取记账本的列表
 router.get('/accounts', checkTokenMiddleware, function(req, res, next) {
-  
+  console.log(22, res.user);
   AccountsModel.find().sort({ time: -1 }).exec()
   .then(data => {
     res.json({

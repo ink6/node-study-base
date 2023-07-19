@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const { secret } = require('../config/config')
 const checkTokenMiddleware = (req, res, next) => {
   const token = req.get('token')
   if (!token) {
@@ -8,7 +9,7 @@ const checkTokenMiddleware = (req, res, next) => {
       data: null
     })
   }
-  jwt.verify(token, 'baogeloveme', (err, data) => {
+  jwt.verify(token, secret, (err, data) => {
     //检测 token 是否正确
     if (err) {
       return res.json({
@@ -17,6 +18,8 @@ const checkTokenMiddleware = (req, res, next) => {
         data: null
       })
     }
+    res.user = data
+    console.log(111, data);
     next()
   })
 }
